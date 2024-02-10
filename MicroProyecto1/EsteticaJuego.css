@@ -1,0 +1,124 @@
+
+.marble-ball {
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: url("https://images.vexels.com/media/users/3/143273/isolated/preview/a9ba0a513b7c33fba3191b31a0ff4d97-bola-de-marmol-negro.png");
+    background-size: cover;
+    background-position: center center;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+table {
+    border-collapse: collapse;
+    width: 190px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+  
+  .text-block-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+  }
+  
+  .text-block {
+    width: 200px;
+    height: 50px;
+    background-color: #e05858dc;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .text-block p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    overflow: auto;
+    height: 100%;
+  }
+
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.arrow-button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30%;
+  background-color: #2e7d32;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.arrow-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+.left-arrow .arrow-icon {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.right-arrow .arrow-icon {
+  transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+}
+
+.left-arrow {
+  margin-right: 300px;
+}
+
+.right-arrow {
+  margin-left: 300px;
+}
+
+
+.rotate-wheel-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 60px;
+  margin-top: 150px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 30px;
+}

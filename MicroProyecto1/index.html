@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Metadatos de funcionalidad/ adaptabilidad para telefono(aun falta probar) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bingo</title>
+    <style>
+
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            
+            
+        }
+
+        body {
+            background-image: url(https://laverdaddevargas.com/wp-content/uploads/2022/09/bingo-destacada.jpg);
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+    </style>
+
+    <link rel="stylesheet" href="EsteticaPagina1.css">
+    <script src="Functions.js" defer></script>
+   
+
+</head>
+
+<body>
+    <div class="imagen"></div>
+
+    <form action="Juego.html" method="GET" id="start-form" onsubmit="startGame(); return false;">
+        <button class="button" type="button" onclick="getPlayerNames()">
+            <span class="button-text">Iniciar partida</span>
+        </button>
+    </form>
+  
+    <header>
+      <div class="inner">
+  
+        <nav>
+          <div class="title">
+            <h1>B i n g o</h1> 
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+    <div class="color-box">
+      <div class="text-container">
+        <h2>Jugadores</h2>
+        <p>Se necesitan minimo dos jugadores para empezar la partida.</p>
+      </div>
+  
+      <div class="player-input-container">
+        <label for="player1">Player 1:</label>
+        <input type="text" id="player1" name="player1">
+  
+        <label for="player2">Player 2:</label>
+        <input type="text" id="player2" name="player2">
+  
+        <label for="player3">Player 3:</label>
+        <input type="text" id="player3" name="player3">
+  
+        <label for="player4">Player 4:</label>
+        <input type="text" id="player4" name="player4">
+      </div>
+    </div>
+  
+    <script src="script.js"></script>
+
+    
+      <div class="leaderboard">
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Victorias</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Player 1</td>
+              <td>5</td>
+            </tr>
+            <tr>
+              <td>Player 2</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Player 3</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Player 4</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Player 5</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <td>Player 6</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Player 7</td>
+              <td>8</td>
+            </tr>
+            <tr>
+              <td>Player 8</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Player 9</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <td>Player 10</td>
+              <td>9</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="dropdown">
+        <select onchange="setBoardSize()">
+            <option value="9">3x3</option>
+            <option value="16">4x4</option>
+            <option value="25">5x5</option>
+        </select>
+      </div>
+
+
+      
+</body>
+</html>
