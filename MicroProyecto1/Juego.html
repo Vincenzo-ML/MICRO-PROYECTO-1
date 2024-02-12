@@ -12,49 +12,93 @@
       body {
         overflow: hidden;
       }
+
+      .matrix-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
     </style>
 
     <link rel="stylesheet" href="EsteticaJuego.css">
     <script src="Functions.js" defer></script>
+    <script src="FuncionesMatriz.js" defer></script>
+
 </head>
 <body>
+
+  <div id="background-container"></div>
+
+  <div class="round-container">
+    <div class="round-text">Ronda</div>
+      <div class="round-number">-1</div>
+  </div>
+
+  <div id="customTextBox"></div>
+
+  <div class="container">
+      <div class="bingo-container">
+          <div class="bingo-table-container">
+              <table id="tblBingo">
+              </table>
+          </div>
+      </div>
+  </div>
   
-
-    <div class="marble-ball-container">
-        <div class="marble-ball"></div>
-        <div class="text-box">
-          <p class="text"></p>
-        </div>
+  <div class="marble-ball-container">
+      <div class="marble-ball"></div>
+      <div class="text-box">
+        <p class="text"> </p>
       </div>
+  </div>
 
-    <table>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Puntaje</th>
+  <table id="score-table">
+      <thead>
+          <tr>   
           </tr>
-        </thead>
-        <tbody>
+      </thead>
+      <tbody></tbody>
+  </table>
 
-        </tbody>
-      </table>
-
-      <div class="text-block-container">
-        <div class="text-block">
-          <p id="text-content">This is some sample text.</p>
-        </div>
-      </div>
-
-      <div class="arrow-container">
-        <button class="arrow-button left-arrow">
-          <span class="arrow-icon"></span>
+  <div class="arrow-container">
+      <button class="arrow-button left-arrow">
+        <span class="arrow-icon"></span>
         </button>
         <button class="arrow-button right-arrow">
           <span class="arrow-icon"></span>
-        </button>
-      </div>
+      </button>
+  </div>
 
-      <button class="rotate-wheel-button">Girar rueda</button>
+  <button class="rotate-wheel-button">Girar rueda</button>
+
+  <body>
+    <div id="wrapper">
+      <!-- Your content goes here -->
+    </div>
+  </body>
+  
+  <div class="table-container">
+    <table id="number-table">
+      <!-- Table rows will be generated dynamically using JavaScript -->
+    </table>
+  </div>
 
 </body>
 </html>

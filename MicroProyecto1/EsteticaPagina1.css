@@ -1,8 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Enable horizontal scrolling */
+}
+
+body {
+    background-image: url(https://laverdaddevargas.com/wp-content/uploads/2022/09/bingo-destacada.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
 header {
-    width: 100vw;
-    height: 100px;
+    width: 100%;
+    height: 15vh;
     border-bottom: solid 5px rgba(219, 43, 43, 0.24);
     font-family: 'Press Start 2P', cursive;
     background-color: #a39999c9;
@@ -34,14 +48,14 @@ header .title h1:hover {
 }
 
 .button {
-    width: 200px;
-    height: 70px;
+    width: 15vw;
+    height: 10vh;
     background-color: #1ab26b;
     border: none;
-    border-radius: 50px;
+    border-radius: 50rem;
     cursor: pointer;
     position: absolute;
-    bottom: 30px;
+    bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -80,113 +94,108 @@ header .title h1:hover {
 }
 
 .color-box {
-position: absolute;
-top: 45%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 420px;
-height: 300px;
-background-color: #ddb06dea;
-border-radius: 10px;
-display: flex;
-flex-direction: column;
-align-items: center;
-overflow: hidden;
-
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35vw;
+    height: 50vh;
+    background-color: #ddb06dea;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
 }
 
 .text-container {
-text-align: center;
-padding: 20px;
+    text-align: center;
+    padding: 1rem;
 }
 
 .text-container h2 {
-margin-top: 0;
+    margin-top: 0;
 }
 
 .text-container p {
-color: #333;
-font-size: 12px;
+    color: #333;
+    font-size: 1rem;
 }
 
 .player-input-container {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-margin-top: 10;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10;
 }
 
 .player-input-container label {
-font-weight: bold;
-margin-right: 10px;
-
-flex-basis: 100px;
-text-align: right;
+    font-weight: bold;
+    margin-right: 1rem;
+    flex-basis: 5rem;
+    text-align: right;
 }
 
 .player-input-container input[type="text"] {
-flex-grow: 1;
-width: 1;
-height: 25px;
-padding: 5px;
-font-size: 16px;
-border: 1px solid #ccc;
-border-radius: 500px;
-box-sizing: border-box;
-margin-bottom: 15px;
-margin-right: 20px;
+    flex-grow: 1;
+    width: 20rem;
+    height: 1.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 500px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    margin-right: 20px;
 }
 
-
 .leaderboard {
-position: absolute;
-top: 59%;
-right: 0;
-margin-right: 3rem;
-transform: translateY(-50%);
-z-index: 2;
+    position: absolute;
+    top: 50vh;
+    right: 0;
+    margin-right: 3rem;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
 .leaderboard table {
-border-collapse: collapse;
-width: 300px;
+    border-collapse: collapse;
+    width: 25vw;
 }
 
 .leaderboard th,
 .leaderboard td {
-border: 5px solid #a7a4a4;
-padding: 10px;
-text-align: left;
+    border: 5px solid #a7a4a4;
+    padding: 10px;
+    text-align: left;
 }
 
 .leaderboard th {
-background-color: #ddb06d;
-font-weight: bold;
+    background-color: #ddb06d;
+    font-weight: bold;
 }
 
 .leaderboard tr {
-background-color: #c7bcbc; 
+    background-color: #c7bcbc; 
 }
 
-
 .dropdown {
-position: absolute;
-bottom: 40px;
-left: 50%;
-transform: translateX(-50%);
-display: flex;
-justify-content: center;
+    position: absolute;
+    bottom: 5vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
 }
 
 .dropdown select {
-    width: 100;
-    height: 50px;
+    width: 100%;
+    height: 3rem;
     border:rgba(255, 255, 255, 0.1);
-
     border-radius: 5;
     background-color: #f1f1f1;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     margin-bottom: 75px;
 }
@@ -195,7 +204,7 @@ justify-content: center;
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
+    min-width: 10vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -218,3 +227,34 @@ justify-content: center;
 .dropdown:hover .button {
     background-color: #3e8e41;
 }
+
+.clear-winners-button {
+    margin: 1vw;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f00;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+}
+
+.clear-winners-button:hover {
+    background-color: #ff5733;
+}
+
+.show-winners-button {
+    margin: 1vw;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    float: right;
+}
+
+.show-winners-button:hover {
+    background-color: #0056b3;
+}
+
