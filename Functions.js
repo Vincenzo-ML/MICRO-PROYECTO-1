@@ -63,7 +63,7 @@ function startGame() {
     const { playerNames, boardSize } = getGameParamsFromURL();
     if (playerNames) {  
         window.location.href = `Juego.html?playerNames=${playerNames.join(',')}&boardSize=${boardSize}`;
-        printPlayerNames(playerNames);  
+        localStorage.setItem('playerScores', scores);
     } else {
         alert('No se pudo iniciar la partida.');
     }
@@ -192,6 +192,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
 });
 
-
+function updateScoreTable() {
+    const playerScores = JSON.parse(localStorage.getItem('playerScores'));
+    fillScoreTable(playerScores);
+  }
+  
+function addScore(playerIndex, score) {
+    const playerScores = JSON.parse(localStorage.getItem('playerScores')) || [];
+    playerScores[playerIndex] += score;
+    localStorage.setItem('playerScores', JSON.stringify(playerScores));
+    updateScoreTable();}
 
 

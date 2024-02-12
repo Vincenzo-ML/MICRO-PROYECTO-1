@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     if (scores) {
       fillScoreTable(scores);
+      updateScoreTable();
     }
   });
 
