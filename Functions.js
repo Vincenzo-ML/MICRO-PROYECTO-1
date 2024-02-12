@@ -1,5 +1,3 @@
-const scores = [0,0,0,0];
-
 function getPlayerNames() {
     const playerInputs = ['player1', 'player2', 'player3', 'player4'];
     const playerNames = [];
