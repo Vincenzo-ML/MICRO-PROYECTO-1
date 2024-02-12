@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Metadatos de funcionalidad/ adaptabilidad para telefono(aun falta probar) -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>partida</title>
+  
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      .matrix-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+
+    </style>
+
+    <link rel="stylesheet" href="EsteticaJuego.css">
+    <script src="Functions.js" defer></script>
+    <script src="FuncionesMatriz.js" defer></script>
+
+</head>
+<body>
+
+  <div id="background-container"></div>
+
+  <div class="round-container">
+    <div class="round-text">Ronda</div>
+      <div class="round-number">-1</div>
+  </div>
+
+  <div id="customTextBox"></div>
+
+  <div class="container">
+      <div class="bingo-container">
+          <div class="bingo-table-container">
+              <table id="tblBingo">
+              </table>
+          </div>
+      </div>
+  </div>
+  
+  <div class="marble-ball-container">
+      <div class="marble-ball"></div>
+      <div class="text-box">
+        <p class="text"> </p>
+      </div>
+  </div>
+
+  <table id="score-table">
+      <thead>
+          <tr>   
+          </tr>
+      </thead>
+      <tbody></tbody>
+  </table>
+
+  <div class="arrow-container">
+      <button class="arrow-button left-arrow">
+        <span class="arrow-icon"></span>
+        </button>
+        <button class="arrow-button right-arrow">
+          <span class="arrow-icon"></span>
+      </button>
+  </div>
+
+  <button class="rotate-wheel-button">Girar rueda</button>
+
+  <body>
+    <div id="wrapper">
+      <!-- Your content goes here -->
+    </div>
+  </body>
+  
+  <div class="table-container">
+    <table id="number-table">
+      <!-- Table rows will be generated dynamically using JavaScript -->
+    </table>
+  </div>
+
+</body>
+</html>

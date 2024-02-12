@@ -1,0 +1,294 @@
+.marble-ball {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-image: url("https://images.vexels.com/media/users/3/143273/isolated/preview/a9ba0a513b7c33fba3191b31a0ff4d97-bola-de-marmol-negro.png");
+  background-size: cover;
+  background-position: center center;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.text-box {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1001;
+  font-size: 30pt;
+  font-weight: bold;
+  /* ... other styles ... */
+}
+
+table {
+  border-collapse: collapse;
+  width: 100px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.text-block-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+}
+
+.text-block {
+  width: 200px;
+  height: 50px;
+  background-color: #e05858dc;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.text-block p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  overflow: auto;
+  height: 100%;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  z-index: 1001;
+  pointer-events: none;
+}
+
+.arrow-button {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 30%;
+  background-color: #2e7d32;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 100px;
+  pointer-events: all;
+  z-index: 1002;
+}
+
+.arrow-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+.left-arrow .arrow-icon {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+
+.right-arrow .arrow-icon {
+  transform: translateX(-50%) translateY(-50%) rotate(-135deg);
+}
+
+.left-arrow {
+  margin-right: 300px;
+}
+
+.right-arrow {
+  margin-left: 300px;
+}
+
+.rotate-wheel-button {
+  position: absolute;
+  top: 40%;
+  right: 0;
+  margin-right: 60px;
+  margin-top: 150px;
+  background-color: #2E7D32;
+  color: white;
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+  z-index: 1003;
+}
+
+.bingo-container {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  flex-grow: 1;
+  margin-top: 100px;
+  border: #353030;
+}
+
+.bingo-table-container {
+  border: 1px solid #706969;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+  background-color: #b8b7a9;
+}
+
+#tblBingo {
+  border-collapse: collapse;
+  height: 15rem;
+  width: 100%;
+  text-align: center;
+  font-size: 18pt;
+  cursor: pointer;
+}
+
+#tblBingo td {
+  padding: 0.3rem;
+}
+
+.cell-format {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20%;
+  border: 0.5px solid #464b4b;
+}
+
+.cell-format:hover {
+  background-color: #474b4b;
+}
+
+.letter-div {
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.letters-bingo {
+  padding: 0 1.3rem;
+  font-size: 30pt;
+  display: none;
+}
+
+.strickout {
+  text-decoration: line-through;
+  color: #353030;
+  font-size: 14pt;
+  pointer-events: none;
+}
+
+.show-bingo {
+  display: inline;
+}
+
+body {
+  background-image: url(https://img.freepik.com/vector-gratis/papel-pintado-abstracto-blanco_23-2148820820.jpg?w=826&t=st=1707686279~exp=1707686879~hmac=10391dd83a0792bc28226e97db607ec11adaea7d3cc85b125cfc5b97c18e170e);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#wrapper {
+  width: 600px;
+  margin: 0 auto;
+  min-height: 100%;
+  background: #BBB;
+  overflow: hidden;
+  position: relative;
+}
+
+h2,
+p {
+  margin: 1em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.round-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  background-color: #ffffff;
+  z-index: 1000;
+  border: 5px solid #000000;
+}
+
+.round-text {
+  margin-right: 15px;
+}
+
+#customTextBox {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.1);
+  padding: 10px;
+  border: 2px solid black;
+  font-size: 1em;
+  width: 250px;
+  text-align: center;
+}
+
+#score-table {
+  width: 10%;
+  border-collapse: collapse;
+  border: 2px solid black;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+#score-table th,
+#score-table td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgb(104, 87, 87);
+  background-color: rgb(219, 180, 180);
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#score-table th {
+  background-color: #a17f7f;
+}
